@@ -10,3 +10,5 @@ pip install -r requirements.txt
 ```
 python run.py list.txt
 ```
+
+dont forget change SERVER with ngrok tcp if u using vps you can change  TCPServer(('localhost', 9999) localhost to 0.0.0.0 and then in SERVER variable change to VPS_IP:PORT example 103.xxx.xxx.xxx:9999
