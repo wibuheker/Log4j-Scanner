@@ -6,9 +6,12 @@ git clone https://github.com/wibuheker/Log4j-Scanner
 cd Log4j-Scanner
 pip install -r requirements.txt
 ```
-## Run
+## Run Ngrok
+and change SERVER value with ngrok_endpoint:port ex: 0.tcp.ngrok.io:13911
 ```
+ngrok tcp 9999 // in another terminal
 python run.py list.txt
 ```
 
-dont forget change SERVER with ngrok tcp if u using vps you can change  TCPServer(('localhost', 9999) localhost to 0.0.0.0 and then in SERVER variable change to VPS_IP:PORT example 103.xxx.xxx.xxx:9999
+if u run in vps change the SERVER value with YOUR_VPS_IP:9999
+
