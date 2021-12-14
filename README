@@ -1,0 +1,12 @@
+## Log4j Scanner
+## Installation
+Required: Python 3.x
+```
+git clone https://github.com/wibuheker/Log4j-Scanner
+cd Log4j-Scanner
+pip install -r requirements.txt
+```
+## Run
+```
+python run.py list.txt
+```
